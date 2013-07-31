@@ -8,7 +8,7 @@ Please use [geanypy](https://github.com/sagarchalise/geanypy/tree/gtk3) *Gtk3 Br
 
 You can get gtk2 as well gtk3 compatible codebase as well as keybinding support by default.
 
-* There is [emmet](https://github.com/sagarchalise/geanypy-emmet) plugin which is new zen-coding *
+* _There is [emmet](https://github.com/sagarchalise/geanypy-emmet) plugin which is new zen-coding_
 
 ######This plugin is for most part a port of [geany-zencoding](https://github.com/codebrainz/geany-zencoding)
 

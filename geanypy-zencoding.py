@@ -79,16 +79,14 @@ class ZenEditor(object):
     def get_current_line(self):
         return self.scintilla.get_current_line()
         
-    def replace_content(self, text, sel_start=-1, sel_end=-1):
+    def replace_content(self, text, start=-1, end=-1):
+        sel_start, sel_end = self.get_selection_range()
         cur_pos = self.get_caret_pos()
         caret_pos = text.find(caret_placeholder) + cur_pos
         text = text.replace(caret_placeholder, "")
-        if sel_start == -1 and sel_end == -1:
-            self.scintilla.set_text(text)
-        elif sel_start != -1 and sel_end == -1:
-            self.scintilla.insert_text(sel_start, text)
-        elif sel_start != -1 and sel_end != -1:
-            self.scintilla.replace_sel(text)
+        if sel_start == sel_end:
+            self.create_selection(sel_start, sel_end)
+        self.scintilla.replace_sel(text)
         self.set_caret_pos(caret_pos)
 
     def get_content(self):

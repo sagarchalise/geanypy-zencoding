@@ -85,7 +85,7 @@ class ZenEditor(object):
         caret_pos = text.find(caret_placeholder) + cur_pos
         text = text.replace(caret_placeholder, "")
         if sel_start == sel_end:
-            self.create_selection(sel_start, sel_end)
+            self.create_selection(start, end)
         self.scintilla.replace_sel(text)
         self.set_caret_pos(caret_pos)
 

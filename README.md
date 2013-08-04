@@ -6,7 +6,7 @@ Old [Zencoding](https://code.google.com/p/zen-coding/) Plugin purely in geanypy
 ####Recommendations
 Please use [geanypy](https://github.com/sagarchalise/geanypy/tree/gtk3) *Gtk3 Branch*
 
-You can get gtk2 as well gtk3 compatible codebase as well as keybinding support by default.
+**You can get gtk2 as well gtk3 compatible codebase as well as keybinding support by default.**
 
 * _There is [emmet](https://github.com/sagarchalise/geanypy-emmet) plugin which is new zen-coding_
 

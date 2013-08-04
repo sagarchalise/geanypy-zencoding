@@ -90,13 +90,11 @@ class ZenEditor(object):
         
     def replace_content(self, text, start=-1, end=-1):
         sel_start, sel_end = self.get_selection_range()
-        cur_pos = self.get_caret_pos()
-        caret_pos = text.find(caret_placeholder) + cur_pos
         text = text.replace(caret_placeholder, "")
         if sel_start == sel_end:
             self.create_selection(start, end)
         self.scintilla.replace_sel(text)
-        self.set_caret_pos(caret_pos)
+        self.set_caret_pos(start)
 
     def get_content(self):
         return self.scintilla.get_contents(self.scintilla.get_length()+1)
